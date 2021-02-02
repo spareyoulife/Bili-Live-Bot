@@ -1,10 +1,69 @@
 [[users]]
-username = ""
-password = ""
+username = "spareyoulife@gmail.com"
+password = "3890626crt."
 alias = ""
 access_key = ""
 cookie = ""
 csrf = ""
 uid = ""
 refresh_token = ""
-manage_room = [ 8478563,]
+manage_room = [ 21752762 ]
+danmu_length = 30
+# 定时循环发送, 在alerts内循环
+alerts = ["请注意弹幕礼仪",
+             "有能力的老板可以送点小礼物，上个小船船~",
+             "直播通知q群请看大屏幕右下角",
+             "老板们上上船吧，求求了",
+             "请戴耳机收听，效果因人而异",
+             "bgm和背景动图进通知群拿",
+             "上船即得红色点播月卡，学习资料",
+             "舰长学习资料周更，已经超过60+ yp",
+             "优质舰长群，主播好友位，月末礼品抽奖",
+             "非常欢迎大家提意见，请移步主页意见箱提交",
+             "请大家尊重主播，恶意言论即禁"]
+# 循环时间间隔,开播才发广告
+alert_second = 60
+# 礼物连送等待
+gift_comb_delay = 5
+# 送礼感谢格式
+gift_thx_format = "感谢{username}投喂的{giftname}x{num}"
+sliver_gift_thx_format = "感谢{username}投喂的{giftname}x{num}"
+gold_gift_thx_format = "感谢{username}投喂的{giftname}x{num}!"
+# 关注感谢格式
+focus_thx_format = "谢谢{username}的关注"
+# 上船感谢
+guard_thx_format = "感谢{username}投喂的{giftname}x{num}"
+# 是否仅开播时答谢
+only_live_thx = false
+# 新关注判定延迟
+fans_check_delay = 30
+
+# 粉丝勋章升级提醒
+medal_update_format = "恭喜{username}的牌牌升到LV{new_level}!"
+
+# 粉丝勋章检测延迟
+medal_update_check_delay = 60
+
+# 随机替换列表，使用标识符可以作为变量取其中的随机值
+# 变量名称为{random1} {random2} {ramdom3}
+# 举个例子
+# random_list_1 = ["小电视","节奏风暴"]
+# gift_thx_format = "谢谢{username}投喂的{num}个{giftname}, 浅浅还想吃许多{random1}"
+
+random_list_1 = []
+random_list_2 = []
+random_list_3 = []
+
+height = 0
+weight = 0
+# 关键词回复
+[[users.reply]]
+  key = "^.*(好听).*$"
+  percent = 1
+  reply = "好听赶紧关注啊！"
+
+# 关键词禁言
+[[users.ban]]
+  key = "^(扣b)$"
+  percent = 1
+  hour = 720
